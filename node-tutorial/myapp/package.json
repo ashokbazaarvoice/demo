@@ -1,0 +1,14 @@
+{
+  "name": "nodeapp",
+  "version": "0.0.0",
+  "description": "This is the test web application using node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}

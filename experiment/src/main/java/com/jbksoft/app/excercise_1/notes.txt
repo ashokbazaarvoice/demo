@@ -1,0 +1,1 @@
+the recursion based adding to nodes in stack, queue, linked list needs to be done.

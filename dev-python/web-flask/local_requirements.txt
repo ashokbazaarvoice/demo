@@ -1,0 +1,7 @@
+pyOpenSSL==0.13
+Flask==0.9
+Werkzeug==0.8.3
+pyjade==1.9
+requests==1.0.4
+xlwt==0.7.5
+docopt==0.6.1

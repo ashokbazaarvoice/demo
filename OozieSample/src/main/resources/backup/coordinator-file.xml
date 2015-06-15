@@ -1,0 +1,30 @@
+<coordinator-app name="JavaMainCoordJobTimeDep"
+                 frequency="${frequency}"
+                 start="${start}"
+                 end="${end}"
+                 timezone="${timeZone}"
+                 xmlns="uri:oozie:coordinator:0.1">
+    <datasets>
+        <dataset name="input1" frequency="15" initial-instance="2014-03-12T13:00Z" timezone="${timeZone}">
+            <!-- Below path can be created on HDFS like ${appPath}/feed/2014/03/11/20 -->
+            <uri-template>${appPath}/feed/${YEAR}/${MONTH}/${DAY}/${HOUR}/${MINUTE}</uri-template>
+        </dataset>
+    </datasets>
+    <input-events>
+        <data-in name="coordInput1" dataset="input1">
+            <start-instance>${coord:current(-1)}</start-instance>
+            <end-instance>${coord:current(0)}</end-instance>
+        </data-in>
+    </input-events>
+    <action>
+        <workflow>
+            <app-path>${workflowAppPath}</app-path>
+            <configuration>
+                <property>
+                    <name>input_files</name>
+                    <value>${coord:dataIn('coordInput1')}</value>
+                </property>
+            </configuration>
+        </workflow>
+    </action>
+</coordinator-app>

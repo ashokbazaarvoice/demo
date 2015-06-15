@@ -1,0 +1,10 @@
+virtualenv web-flask
+cd web-flask/
+. bin/activate
+pip install -r local_requirements.txt
+python hello.py 
+vi secure.py
+python secure.py 
+deactivate
+
+

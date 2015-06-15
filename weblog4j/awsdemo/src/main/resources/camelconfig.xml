@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+    <camelContext id="sqsContext" xmlns="http://camel.apache.org/schema/spring">
+        <route>
+            <from uri="aws-sqs://PhotoQueue?accessKey=abcd&amp;secretKey=abcd&amp;amazonSQSEndpoint=https://sqs.ap-southeast-1.amazonaws.com"/>
+            <to uri="bean:sqsBeanProcessor?method=processSQSMessage"/>
+        </route>
+    </camelContext>
+
+    <bean id="sqsRouter" class="com.aranin.aws.sqs.SQSBeanRouterBuilder"/>
+
+    <bean id="sqsBeanProcessor" class="com.aranin.aws.sqs.BeanProcessor"/>
+
+</beans>

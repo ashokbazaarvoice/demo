@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd
+           http://www.springframework.org/schema/cache
+           http://www.springframework.org/schema/cache/spring-cache-3.1.xsd">
+
+    <cache:annotation-driven/>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/adconnect"/>
+        <property name="username" value="root"/>
+        <property name="password" value="dev2india"/>
+    </bean>
+
+    <!-- Hibernate session factory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+        <property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.jdbc.batch_size">20</prop>
+                <prop key="hibernate.connection.release_mode">after_statement</prop>
+            </props>
+        </property>
+
+        <property name="annotatedClasses">
+            <list>
+                <value>com.aranin.spring.vo.BookVO</value>
+            </list>
+        </property>
+
+    </bean>
+
+
+
+
+
+    <bean name="cacheManager" class="com.google.code.ssm.spring.SSMCacheManager">
+        <property name="caches">
+            <set>
+                <bean class="com.google.code.ssm.spring.SSMCache">
+                    <constructor-arg name="cache" index="0" ref="defaultCache"/>
+                    <!-- 5 minutes -->
+                    <constructor-arg name="expiration" index="1" value="300"/>
+                    <!-- @CacheEvict(..., "allEntries" = true) doesn't work -->
+                    <constructor-arg name="allowClear" index="2" value="false"/>
+                </bean>
+            </set>
+        </property>
+
+    </bean>
+
+    <bean name="defaultCache" class="com.google.code.ssm.CacheFactory">
+        <property name="cacheName" value="defaultCache"/>
+        <property name="cacheClientFactory">
+            <bean name="cacheClientFactory" class="com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl"/>
+        </property>
+        <property name="addressProvider">
+            <bean class="com.google.code.ssm.config.DefaultAddressProvider">
+                <property name="address" value="127.0.0.1:11211"/>
+            </bean>
+        </property>
+        <property name="configuration">
+            <bean class="com.google.code.ssm.providers.CacheConfiguration">
+                <property name="consistentHashing" value="true"/>
+            </bean>
+        </property>
+
+    </bean>
+
+      <bean id="bookDAO" class="com.aranin.spring.dao.impl.BookDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+    <bean id="cachedBookDAO" class="com.aranin.spring.dao.impl.CachedBookDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+</beans>
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+{"namespace": "com.bazaarvoice.consus",
+ "type": "record",
+ "name": "NativeReview",
+ "fields": [
+     {"name": "cid", "type": "string"},
+     {"name": "d", "type": "boolean"},
+     {"name": "fsd", "type": "long"},
+     {"name": "lrid", "type": "string"},
+     {"name": "lua", "type": "long"},
+     {"name": "pid", "type": "string"},
+     {"name": "rate", "type": "string"},
+     {"name": "rid", "type": "string"},
+     {"name": "rt", "type": "string"},
+     {"name": "s", "type": "string"},
+     {"name": "t", "type": "string"},
+     {"name": "r", "type": "int", "default" : -1},
+     {"name": "nps", "type": "int", "default" : -1}
+ ]
+}

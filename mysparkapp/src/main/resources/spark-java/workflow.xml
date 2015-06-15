@@ -1,0 +1,30 @@
+<workflow-app xmlns='uri:oozie:workflow:0.5' name='SparkFileCopy'>
+    <start to='spark-node' />
+
+    <action name='spark-node'>
+        <java>
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <configuration>
+                <property>
+                    <name>mapred.job.queue.name</name>
+                    <value>${queueName}</value>
+                </property>
+            </configuration>
+            <main-class>com.jbksoft.app.SparkFileCopy</main-class>
+            <arg>${nameNode}/user/${wf:user()}/input-data/text/data.txt</arg>
+            <arg>${nameNode}/user/${wf:user()}/output-data/spark</arg>
+            <arg>Hello</arg>
+            <arg>Oozie!</arg>
+        </java>
+        <ok to="end" />
+        <error to="fail" />
+    </action>
+
+    <kill name="fail">
+        <message>Workflow failed, error
+            message[${wf:errorMessage(wf:lastErrorNode())}]
+        </message>
+    </kill>
+    <end name='end' />
+</workflow-app>

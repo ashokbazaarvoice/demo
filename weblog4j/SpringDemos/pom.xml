@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.aranin.spring</groupId>
+  <artifactId>SpringDemos</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>SpringDemos</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <spring.version>3.2.2.RELEASE</spring.version>
+      <camel-version>2.10.4</camel-version>
+      <lucene-version>4.3.0</lucene-version>
+      <neo4j-version>1.9.1</neo4j-version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+      <!-- log sl4j with log4j-->
+       <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.5.6</version>
+       </dependency>
+       <!-- concrete Log4J Implementation for SLF4J API-->
+       <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <version>1.5.6</version>
+       </dependency>
+
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.8.1</version>
+         <scope>test</scope>
+       </dependency>
+      <dependency>
+         <groupId>org.mockito</groupId>
+         <artifactId>mockito-all</artifactId>
+         <version>1.8.5</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.hamcrest</groupId>
+         <artifactId>hamcrest-integration</artifactId>
+         <version>1.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>net.avh4.util</groupId>
+        <artifactId>imagecomparison</artifactId>
+        <version>0.0.2</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!--  Spring 3-->
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-core</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-beans</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+
+
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-jdbc</artifactId>
+         <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-orm</artifactId>
+         <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-context-support</artifactId>
+         <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.google.code.simple-spring-memcached</groupId>
+          <artifactId>spring-cache</artifactId>
+          <version>3.1.0</version>
+      </dependency>
+
+
+      <dependency>
+        <groupId>com.google.code.simple-spring-memcached</groupId>
+        <artifactId>xmemcached-provider</artifactId>
+        <version>3.1.0</version>
+      </dependency>
+
+     <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+        <version>3.3.2.GA</version>
+     </dependency>
+     <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-annotations</artifactId>
+        <version>3.4.0.GA</version>
+     </dependency>
+
+     <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>1.0.2</version>
+     </dependency>
+
+
+     <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.12</version>
+     </dependency>
+
+      <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>1.2.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>javassist</groupId>
+        <artifactId>javassist</artifactId>
+        <version>3.12.1.GA</version>
+      </dependency>
+
+
+      <!--Lucene dependencies-->
+      <dependency>
+        <artifactId>lucene-core</artifactId>
+        <groupId>org.apache.lucene</groupId>
+        <type>jar</type>
+        <version>${lucene-version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>lucene-queries</artifactId>
+        <groupId>org.apache.lucene</groupId>
+        <type>jar</type>
+        <version>${lucene-version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>lucene-queryparser</artifactId>
+        <groupId>org.apache.lucene</groupId>
+        <type>jar</type>
+        <version>${lucene-version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>lucene-analyzers-common</artifactId>
+        <groupId>org.apache.lucene</groupId>
+        <type>jar</type>
+        <version>${lucene-version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>lucene-facet</artifactId>
+        <groupId>org.apache.lucene</groupId>
+        <type>jar</type>
+        <version>${lucene-version}</version>
+      </dependency>
+
+
+      <!-- neo4j dependencies -->
+      <dependency>
+        <groupId>org.neo4j</groupId>
+        <artifactId>neo4j</artifactId>
+        <version>${neo4j-version}</version>
+      </dependency>
+
+      <dependency>
+           <groupId>commons-httpclient</groupId>
+           <artifactId>commons-httpclient</artifactId>
+           <version>3.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpclient</artifactId>
+          <version>4.1.3</version>
+          <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpmime</artifactId>
+          <version>4.1.3</version>
+          <scope>compile</scope>
+      </dependency>
+
+
+     <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.9</version>
+     </dependency>
+
+
+     <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>3.9</version>
+     </dependency>
+
+
+  </dependencies>
+</project>

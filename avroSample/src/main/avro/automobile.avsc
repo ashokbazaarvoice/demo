@@ -1,0 +1,29 @@
+{
+	"namespace":"com.example.avroSample.model",
+	"type":"record",
+	"name":"Automobile",
+	"fields":[
+		{
+			"name":"modelName",
+			"type":"string"
+		},
+		{
+			"name":"make",
+			"type":"string"
+		},
+		{
+			"name":"modelYear",
+			"type":"int"
+		},
+		{
+			"name":"passengerCa",
+			"type":"int"
+		},
+		{
+            "name":"passengerCapacity2",
+            "type": "int",
+            "default" : -1
+        }
+	]
+	
+}

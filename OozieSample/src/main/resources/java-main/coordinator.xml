@@ -1,0 +1,12 @@
+<coordinator-app name="JavaMainCoordJobTimeDep"
+                 frequency="${frequency}"
+                 start="${start}"
+                 end="${end}"
+                 timezone="${timeZone}"
+                 xmlns="uri:oozie:coordinator:0.1">
+    <action>
+        <workflow>
+            <app-path>${workflowAppPath}</app-path>
+        </workflow>
+    </action>
+</coordinator-app>

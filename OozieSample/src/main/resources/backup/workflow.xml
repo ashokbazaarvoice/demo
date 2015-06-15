@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow-app name="MyWorkflowJavaMainAction" xmlns="uri:oozie:workflow:0.1">
+    <start to="javaMainAction"/>
+    <action name="MyJavaMainAction">
+        <java>
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <configuration>
+                <property>
+                    <name>mapred.job.queue.name</name>
+                    <value>${queueName}</value>
+                </property>
+            </configuration>
+            <main-class>com.jbksoft.oozie.DemoJavaMainJob</main-class>
+            <arg>${inputDir}</arg>
+            <arg>${outputDir}</arg>
+        </java>
+        <ok to="end"/>
+        <error to="killJobAction"/>
+    </action>
+    <kill name="killJobAction">
+        <message>"Killed job due to error: ${wf:errorMessage(wf:lastErrorNode())}"</message>
+    </kill>
+    <end name="end"/>
+</workflow-app>
