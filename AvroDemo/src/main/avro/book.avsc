@@ -1,5 +1,5 @@
 {
-	"namespace": "com.bazaarvoice.entity",
+	"namespace": "com.jbksoft.entity",
 	"type": "record",
 	"name": "Book",
 	"fields": [

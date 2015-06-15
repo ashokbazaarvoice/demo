@@ -1,4 +1,4 @@
-{"namespace": "com.bazaarvoice.consus",
+{"namespace": "com.jbksoft.consus",
  "type": "record",
  "name": "NativeReview",
  "fields": [
