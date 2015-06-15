@@ -54,11 +54,11 @@
                 </property>
                 <property>
                     <name>mapreduce.map.class</name>
-                    <value>com.bazaarvoice.hadoop.MultipleOutputMapper</value>
+                    <value>com.jbksoft.hadoop.MultipleOutputMapper</value>
                 </property>
                 <property>
                     <name>mapreduce.reduce.class</name>
-                    <value>com.bazaarvoice.hadoop.MultipleOutputReducer</value>
+                    <value>com.jbksoft.hadoop.MultipleOutputReducer</value>
                 </property>
                 <property>
                     <name>mapreduce.output.lazyoutputformat.outputformat</name>

@@ -35,8 +35,8 @@ public class MyHBaseClient {
     public MyHBaseClient() {
 //        try {
 //            conf = HBaseConfiguration.create();
-//            conf.set(HBASE_ROOT_DIR, "hdfs://cdh4-master-0.mag.bazaarvoice.com:8020/hbase");
-//            conf.set(HBASE_ZOOKEEPER, "cdh4hb-support-0.mag.bazaarvoice.com");
+//            conf.set(HBASE_ROOT_DIR, "hdfs://cdh4-master-0.mag.jbksoft.com:8020/hbase");
+//            conf.set(HBASE_ZOOKEEPER, "cdh4hb-support-0.mag.jbksoft.com");
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }

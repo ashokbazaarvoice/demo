@@ -35,13 +35,13 @@ public class HBaseByteTest {
 //
 //        configuration = HBaseConfiguration.create();
 //
-//        configuration.set(HBASE_ROOT_DIR, "hdfs://cdh4-master-0.mag.bazaarvoice.com:8020/hbase");
-//        configuration.set(HBASE_ZOOKEEPER, "cdh4hb-support-0.mag.bazaarvoice.com");
+//        configuration.set(HBASE_ROOT_DIR, "hdfs://cdh4-master-0.mag.jbksoft.com:8020/hbase");
+//        configuration.set(HBASE_ZOOKEEPER, "cdh4hb-support-0.mag.jbksoft.com");
 
 //        configuration.set("hbase.zookeeper.property.clientPort", "2181");
-//        configuration.set("hbase.zookeeper.quorum", "cdh4hb-master-1.mag.bazaarvoice.com,cdh4hb-support-0.mag.bazaarvoice.com,cdh4hb-master-0.mag.bazaarvoice.com");
-//        configuration.set("hbase.master", "cdh4hb-master-1.mag.bazaarvoice.com:60000");
-//        configuration.set("hbase.master.info.bindAddress", "cdh4hb-master-1.mag.bazaarvoice.com");
+//        configuration.set("hbase.zookeeper.quorum", "cdh4hb-master-1.mag.jbksoft.com,cdh4hb-support-0.mag.jbksoft.com,cdh4hb-master-0.mag.jbksoft.com");
+//        configuration.set("hbase.master", "cdh4hb-master-1.mag.jbksoft.com:60000");
+//        configuration.set("hbase.master.info.bindAddress", "cdh4hb-master-1.mag.jbksoft.com");
 //        configuration.set("hbase.master.info.port", "60010");
 
 //        configuration.addResource(new Path("hbase-site.xml"));

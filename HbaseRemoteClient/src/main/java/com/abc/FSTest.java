@@ -1,7 +1,7 @@
 package com.abc;
 
-//import com.bazaarvoice.consus.file.FileUtilService;
-//import com.bazaarvoice.magpie.hadoop.hdfs.FileSystems;
+//import com.jbksoft.consus.file.FileUtilService;
+//import com.jbksoft.magpie.hadoop.hdfs.FileSystems;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;

@@ -11,7 +11,7 @@
                     <value>${queueName}</value>
                 </property>
             </configuration>
-            <main-class>com.bazaarvoice.oozie.DemoJavaMainJob</main-class>
+            <main-class>com.jbksoft.oozie.DemoJavaMainJob</main-class>
             <arg>${inputDir}</arg>
             <arg>${outputDir}</arg>
         </java>
