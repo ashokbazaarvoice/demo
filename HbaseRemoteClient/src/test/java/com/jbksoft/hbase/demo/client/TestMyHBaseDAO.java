@@ -1,9 +1,12 @@
 package com.jbksoft.hbase.demo.client;
 
+import com.abc.HBaseTestObj;
+import com.abc.MyHBaseDAO;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.HTablePool;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;

@@ -1,5 +1,6 @@
 package com.jbksoft.hbase.demo.client;
 
+import com.abc.MyReducer;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -7,6 +8,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mrunit.mapreduce.ReduceDriver;
 import org.apache.hadoop.mrunit.types.Pair;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,7 @@
 package com.jbksoft.hbase.demo.client;
 
+import com.abc.HBaseTestObj;
+import com.abc.MyHBaseDAO;
 import org.apache.hadoop.hbase.HBaseTestingUtility;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.HTableInterface;
@@ -7,6 +9,8 @@ import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MyHBaseIntegrationTest {
     private static HBaseTestingUtility utility;
