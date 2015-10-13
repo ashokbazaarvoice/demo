@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="spring-security-login-and-registration:war">
-    <output-path>$PROJECT_DIR$/../../tutorials/target</output-path>
-    <root id="archive" name="spring-security-login-and-registration.war">
-      <element id="artifact" artifact-name="spring-security-login-and-registration:war exploded" />
-    </root>
-  </artifact>
-</component>
