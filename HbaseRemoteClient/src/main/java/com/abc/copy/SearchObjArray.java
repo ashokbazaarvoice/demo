@@ -23,8 +23,8 @@ public class SearchObjArray {
         Arrays.sort(sa,rs);
         for(String s : sa)
             System.out.print(s + " ");
-        System.out.println("\none = " + Arrays.binarySearch(sa,"one"));  // #4
-        System.out.println("one = " + Arrays.binarySearch(sa,"one",rs));  // #5
+        System.out.println("\none = " + Arrays.binarySearch(sa,"one"));  // #4 says -1
+        System.out.println("one = " + Arrays.binarySearch(sa,"one",rs));  // #5 says index 2
 }
     static class ReSortComparator implements Comparator<String> {
         public int compare(String a, String b) {

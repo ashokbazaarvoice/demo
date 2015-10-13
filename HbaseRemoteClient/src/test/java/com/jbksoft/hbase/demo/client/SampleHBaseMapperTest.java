@@ -1,6 +1,6 @@
 package com.jbksoft.hbase.demo.client;
 
-import com.abc.SampleHbaseMapper;
+import com.jbksoft.hadoop.SampleHbaseMapper;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.KeyValueTestUtil;

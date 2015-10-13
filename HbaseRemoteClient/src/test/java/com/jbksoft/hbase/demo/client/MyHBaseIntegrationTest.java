@@ -1,7 +1,7 @@
 package com.jbksoft.hbase.demo.client;
 
-import com.abc.HBaseTestObj;
-import com.abc.MyHBaseDAO;
+import com.jbksoft.hadoop.HBaseTestObj;
+import com.jbksoft.hadoop.MyHBaseDAO;
 import org.apache.hadoop.hbase.HBaseTestingUtility;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.HTableInterface;

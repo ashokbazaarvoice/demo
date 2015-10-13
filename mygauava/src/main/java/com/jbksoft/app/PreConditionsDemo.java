@@ -18,7 +18,7 @@ public class PreConditionsDemo {
     }
 
     public static void print(Object obj){
-       // Preconditions.checkArgument(obj!=null);
+        Preconditions.checkArgument(obj!=null,"Invalid argument 1",obj);
         Preconditions.checkNotNull(obj, "Invalid argument", obj);
         System.out.println(obj);
     }

@@ -19,8 +19,8 @@ public class JDKProxyTest {
 
         //proxy
         AnInterface proxy = (AnInterface) Proxy.newProxyInstance(
-                realSubject.getClass().getClassLoader(),
-                realSubject.getClass().getInterfaces(),
+                AClass.class.getClassLoader(),
+                AClass.class.getInterfaces(),
                 new SimpleInvocationHandler(realSubject));
         passMeAProxy(proxy);
     }
@@ -31,6 +31,7 @@ public class JDKProxyTest {
 }
 
 class SimpleInvocationHandler implements InvocationHandler {
+    private Object realSubject = null;
     public SimpleInvocationHandler(Object realSubject) {
         this.realSubject = realSubject;
     }
@@ -47,7 +48,7 @@ class SimpleInvocationHandler implements InvocationHandler {
         return result;
     }
 
-    private Object realSubject = null;
+
 }
 
 interface AnInterface {

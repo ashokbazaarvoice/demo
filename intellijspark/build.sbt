@@ -10,6 +10,8 @@ libraryDependencies += "org.apache.avro" % "avro-mapred" % "1.7.6"
 
 libraryDependencies +=  "org.apache.hadoop" % "hadoop-client" % "2.0.0-mr1-cdh4.2.0"
 
+//libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.4.0"
+
 resolvers ++= Seq(
     "Cloudera Repository" at "https://repository.cloudera.com/artifactory/cloudera-repos/",
     "Akka Repository" at "http://repo.akka.io/releases/",

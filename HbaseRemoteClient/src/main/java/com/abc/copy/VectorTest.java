@@ -12,33 +12,28 @@ import java.util.Vector;
 public class VectorTest {
     public static void main(String[] args) {
         Vector<String> vector = new Vector<String>();
-//        vector.add("1");
-//        vector.add("2");
-//        vector.add("3");
-//        for (String str : vector) {
-//            System.out.println(str);
-//        }
-//        System.out.println("Size : " + vector.size());
-//        vector.set(vector.size() - 1, "4");
-//        for (String str : vector) {
-//            System.out.println(str);
-//        }
+        vector.add("1");
+        vector.add("2");
+        vector.add("3");
+        System.out.println(vector);
+        System.out.println("Size : " + vector.size());
+        vector.set(vector.size() - 1, "4");
+        System.out.println(vector);
+        vector = new Vector<String>();
         final int c = 500;
         int counter = 0;
         for (int i = 0; i < 10; i++) {
             if (counter % c == 0) {
-                System.out.println("in add counter : "+counter+" Cond : "+(counter % c) + " Vector size : " +vector.size());
+                System.out.println("in add counter : "+counter+" Cond : "+(counter % c) + " Vector size : " +vector.size() +" Content : "+vector);
                 vector.add(Integer.toString(i));
             } else {
-                System.out.println("in set counter : "+counter+" Cond : "+(counter % c )+ " Vector size : " +vector.size());
+                System.out.println("in set counter : "+counter+" Cond : "+(counter % c )+ " Vector size : "  +vector.size() +" Content : "+vector);
                 vector.set(vector.size() - 1,
                         i + " " + vector.get(vector.size() - 1));
             }
             System.out.println("####"+counter);
             counter++;
         }
-        for (String str : vector) {
-            System.out.println(str);
-        }
+        System.out.println(vector);
     }
 }

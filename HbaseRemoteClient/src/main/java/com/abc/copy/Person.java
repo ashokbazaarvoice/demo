@@ -48,4 +48,8 @@ public class Person {
 //    public int hashCode() {
 //        return name.hashCode();
 //    }
+
+    public Person getPerson(String name){
+        return new Person(name);
+    }
 }

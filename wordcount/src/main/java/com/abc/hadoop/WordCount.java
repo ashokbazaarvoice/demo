@@ -23,7 +23,7 @@ public class WordCount {
         @Override
         protected void map(LongWritable offset, Text text, Context context)
                 throws IOException, InterruptedException {
-            System.out.println("Hello for all from map");
+            System.out.println("Hello for all from map"+text.toString());
             for (String token : text.toString().split("\\s+")) {
                 tokenValue.set(token);
                 context.write(tokenValue, ONE);

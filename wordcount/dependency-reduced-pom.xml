@@ -7,10 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
   <build>
-    <finalName>${artifactId}</finalName>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
         <configuration>
           <source>${jdk.version}</source>
           <target>${jdk.version}</target>
@@ -27,15 +28,16 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+              <transformers>
+                <transformer />
+              </transformers>
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
                   <excludes>
                     <exclude>META-INF/*.SF</exclude>
                     <exclude>META-INF/*.DSA</exclude>
-                    <exclude>META-INF/*.RSA</exclude>
-                    <exclude>*/job.properties</exclude>
-                    <exclude>*/workflow.xml</exclude>
+                    <exclude>META-INF/*</exclude>
                   </excludes>
                 </filter>
               </filters>
@@ -60,16 +62,11 @@
     </dependency>
   </dependencies>
   <properties>
-    <avro.version>1.7.5</avro.version>
-    <hadoop.mr1.version>2.0.0-mr1-cdh4.1.2</hadoop.mr1.version>
-    <slf4j.version>1.7.4</slf4j.version>
-    <junit.version>4.10</junit.version>
-    <hbase.version>0.92.1-cdh4.1.2</hbase.version>
+    <jdk.version>1.7</jdk.version>
     <log4j.version>1.2.16</log4j.version>
+    <hadoop.version>2.5.0-cdh5.3.3</hadoop.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <hadoop.version>2.0.0-cdh4.2.0</hadoop.version>
-    <jackson.version>2.1.2</jackson.version>
-    <jdk.version>1.6</jdk.version>
+    <junit.version>4.10</junit.version>
   </properties>
 </project>
 

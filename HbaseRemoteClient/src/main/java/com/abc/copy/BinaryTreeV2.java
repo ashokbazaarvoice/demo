@@ -189,9 +189,9 @@ public class BinaryTreeV2 {
 
         // Different ways to traverse binary trees
 
-        // theTree.inOrderTraverseTree(theTree.root);
+        //theTree.inOrderTraverseTree(theTree.root);
 
-        // theTree.preorderTraverseTree(theTree.root);
+         theTree.preorderTraverseTree(theTree.root);
 
         // theTree.postOrderTraverseTree(theTree.root);
 

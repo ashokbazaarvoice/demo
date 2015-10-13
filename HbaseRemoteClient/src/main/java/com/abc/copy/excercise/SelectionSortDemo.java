@@ -25,19 +25,21 @@ public class SelectionSortDemo {
         demo.selectionSort(data1);
     }
 
+    // this is inplace sorting but using max pos
     public int[] sort(int[] data){
         if(data.length <= 1)
             return data;
-        for(int i = data.length; i > 1; i--){
-            int max = data[0];
+        for(int i = data.length; i > 1; i--){ // decreasing
+            int max = data[0]; // extra variable
             int maxPos = 0;
-            for(int n = 1; n < i; n++ ){
+            for(int n = 1; n < i; n++ ){ // increasing
                 if(data[n] > max) {
                     max = data[n];
                     maxPos = n;
                 }
                 print(data);
             }
+            //swap the elements
             int temp = data[i-1];
             data[i-1] = max;
             data[maxPos] =  temp;
@@ -46,17 +48,20 @@ public class SelectionSortDemo {
         return data;
     }
 
+    // this is also inplace but using min pos
     int[] selectionSort(int[] input) {
-        for (int i = 0; i < input.length; i++) {
-            int result = i;
-            for (int n = i + 1; n < input.length; n++) {
-                if (input[n] < input[result]) {
-                    result = n;
+        for (int i = 0; i < input.length; i++) { // increasing
+            int minPos = i;
+            for (int n = i + 1; n < input.length; n++) { // increasing
+                // finding minimum here
+                if (input[n] < input[minPos]) {
+                    minPos = n;
                 }
                 print(input);
             }
-            int temp = input[result];
-            input[result] = input[i];
+            // swap the elements
+            int temp = input[minPos];
+            input[minPos] = input[i];
             input[i] = temp;
             //print(input);
         }

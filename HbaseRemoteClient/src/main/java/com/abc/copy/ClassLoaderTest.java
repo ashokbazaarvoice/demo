@@ -22,7 +22,7 @@ public class ClassLoaderTest {
         System.out.println(classLoader.toString());
         classLoader = ClassLoaderTest.class.getClassLoader();
         System.out.println(classLoader.toString());
-        //classLoader.loadClass("com.abc.copy.Person");
+        //classLoader.loadClass("Person");
         try {
             Class aClass = classLoader.loadClass("com.abc.copy.Person");
             System.out.println("aClass.getName() = " + aClass.getName());
@@ -36,7 +36,7 @@ public class ClassLoaderTest {
             String returnValue = (String) myMethod.invoke(person,
                     new Object[] { "ABD" });
 
-            System.out.println("The value returned from the method is:"
+            System.out.println("The value returned from the method is: "
                     + returnValue);
 
         } catch (ClassNotFoundException e) {

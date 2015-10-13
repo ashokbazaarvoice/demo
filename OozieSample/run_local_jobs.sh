@@ -81,12 +81,12 @@ cp -r ${SRC_DIR}/main/resources/java-main/ ${TARGET_DIR}/${JOB_NAME}/
 cat > ${TARGET_DIR}/coordinator.properties << EOF
 start=${START_ARG}
 end=${END_ARG}
-nameNode=hdfs://aagarwal-mbpro.local:8020
-jobTracker=aagarwal-mbpro.local:8021
+nameNode=hdfs://localhost:8020
+jobTracker=localhost:8032
 queueName=default
 zooKeeperQuorum=localhost
 zooKeeperPort=2181
-oozie.wf.application.path=hdfs://aagarwal-mbpro.local:8020/apps/${JOB_NAME}
+oozie.wf.application.path=hdfs://localhost:8020/apps/${JOB_NAME}
 EOF
 hadoop fs -rm -r /apps/${JOB_NAME}
 hadoop fs -mkdir /apps/${JOB_NAME}
@@ -95,7 +95,7 @@ hadoop fs -copyFromLocal ${TARGET_DIR}/${JOB_NAME} /apps/
 #oozie job -oozie http://aagarwal-mbpro.local:11000/oozie -config ${TARGET_DIR}/coordinator.properties -run
 #oozie job -oozie http://aagarwal-mbpro.local:11000/oozie -config /apps/${JOB_NAME}/job.properties -run
 #oozie job -oozie http://aagarwal-mbpro.local:11000/oozie -config ${SRC_DIR}/main/resources/backup/job.properties -run
-oozie job -oozie http://aagarwal-mbpro.local:11000/oozie -config ${SRC_DIR}/main/resources/backup/job_bk.properties -run
+oozie job -oozie http://localhost:11000/oozie -config ${SRC_DIR}/main/resources/backup/job.properties -run
 
 if [ $? -ne 0 ]; then
     echo "Unable to upload package."

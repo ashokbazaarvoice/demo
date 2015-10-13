@@ -34,5 +34,8 @@ public class RegexDemo {
         s = "this is True";
         System.out.println(s.matches(".*.[tT]rue|[yY]es"));
 
+        s = "this is True";
+        System.out.println(s.matches("[a-zA-Z\\s]*"));
+
     }
 }

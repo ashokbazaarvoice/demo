@@ -1,7 +1,6 @@
 package com.jbksoft.hadoop;
 
 import au.com.bytecode.opencsv.CSVReader;
-import com.abc.MyTableMapper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.KeyValue;

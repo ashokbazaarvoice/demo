@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../CDH5Demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MavenSample1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../OozieSample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../avroSample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mygauava" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../sparkdemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../wordcount" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../levelup-java-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../tutorials" charset="UTF-8" />
+  </component>
+</project>
+

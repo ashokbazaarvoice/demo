@@ -23,6 +23,7 @@ public class VerifyBST {
         myTree.right.left = new Tree(5);//now we test a false case
         myTree.right.right = new Tree(7);//made a typo sorry
 
+        printTree(myTree);
         //so this should be a binary search tree!
         //please notice when we call the method from main block, we define the range as all possible integer values!
         System.out.println("My tree is BST? "+IfBST(myTree, Integer.MIN_VALUE, Integer.MAX_VALUE));
@@ -48,6 +49,17 @@ public class VerifyBST {
         else
             return false;//as the current node finds inappropriate node, return false immediately
     }
+
+    public  static void printTree(Tree tree){
+        if (tree == null) {
+            return;
+        } else {
+            printTree(tree.left);
+            System.out.print(tree.value+ " ");
+            printTree(tree.right);
+        }
+
+    }
 }
 
 //firstly. we create a tree class for testing
@@ -68,7 +80,9 @@ class Tree {
  *
  * Step by step to crack programming interview questions.
  * 1. All questions were searched publicly from Google, Glassdoor, Careercup and StackOverflow.
- * 2. All codes were written from scratch and links to download the source files are provided in each video's description. All examples were written in java, and tools I have used include Editplus, Eclipse and IntelliJ.
- * 3. All videos were made without using any non-authorized material. All videos are silent sorry. Text comment is provided during coding as additional explanations.
+ * 2. All codes were written from scratch and links to download the source files are provided in
+ *      each video's description. All examples were written in java, and tools I have used include Editplus, Eclipse and IntelliJ.
+ * 3. All videos were made without using any non-authorized material. All videos are silent sorry. Text comment
+ *      is provided during coding as additional explanations.
  * Thank you very much.
  */

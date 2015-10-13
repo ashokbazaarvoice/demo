@@ -8,6 +8,11 @@ import java.util.regex.Pattern;
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World");
+
+        String str = "\"1401778800000\"";
+
+        System.out.println(str.substring(1,14));
+
         MyConcreteClass myConcreteClass = new MyConcreteClass();
         myConcreteClass.mymethod();
         //MyAbstract myAbstract = new MyAbstract();

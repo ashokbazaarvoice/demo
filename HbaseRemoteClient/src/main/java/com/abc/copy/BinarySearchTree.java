@@ -263,8 +263,8 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
     public static void main( String [ ] args )
     {
         BinarySearchTree<Integer> t = new BinarySearchTree<Integer>( );
-        final int NUMS = 4000;
-        final int GAP  =   37;
+        final int NUMS = 39;
+        final int GAP  =   7;
 
         System.out.println( "Checking... (no more output means success)" );
 

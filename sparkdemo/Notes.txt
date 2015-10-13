@@ -1,0 +1,33 @@
+scala> val data = Array(1, 2, 3, 4, 5)
+data: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> val dataStr = Array("Hello","All")
+dataStr: Array[String] = Array(Hello, All)
+
+scala> dataStr.count()
+<console>:22: error: not enough arguments for method count: (p: String => Boolean)Int.
+Unspecified value parameter p.
+              dataStr.count()
+                           ^
+
+scala> dataStr.collect()
+<console>:22: error: not enough arguments for method collect: (pf: PartialFunction[String,B])(implicit bf: scala.collection.generic.CanBuildFrom[Array[String],B,That])That.
+Unspecified value parameter pf.
+              dataStr.collect()
+                             ^
+
+scala> data.reduce(_+_)
+res7: Int = 15
+
+scala> dataStr.reduce(_+_)
+res8: String = HelloAll
+
+scala> dataStr.take(2)
+res10: Array[String] = Array(Hello, All)
+
+scala> dataStr.take(1)
+res11: Array[String] = Array(Hello)
+
+scala> dataStr.foreach(x => println(x+"my"))
+Hellomy
+Allmy

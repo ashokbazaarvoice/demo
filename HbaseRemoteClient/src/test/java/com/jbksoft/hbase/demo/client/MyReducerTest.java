@@ -1,6 +1,6 @@
 package com.jbksoft.hbase.demo.client;
 
-import com.abc.MyReducer;
+import com.jbksoft.hadoop.MyReducer;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -15,8 +15,6 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class MyReducerTest {
     ReduceDriver<Text, Text, ImmutableBytesWritable, Writable> reduceDriver;

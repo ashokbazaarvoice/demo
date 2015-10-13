@@ -10,25 +10,23 @@ package com.abc.copy.excercise;
 public class InsertionSortingDemo {
 
 //    second if can be replaced by while or breaks
-//    public int[] sort(int[] data){
+//    public int[] sortA(int[] data){
 //        int citer = 0;
 //        if(data.length <= 1)
 //            return data;
 //        for(int i = 1; i < data.length; i++){
+//            int temp = data[i];
 //            for(int n = i; n > 0; n--){
+//
 //                if(data[n] < data[n-1]) {
-//                    //swap(data[n], data[n-1]); Wrong approach
-//                    int temp = data[n];
-//                    data[n] = data[n-1];
-//                    data[n-1] = temp;
-//                }
-//                else
+//                    // shift
+//                        data[n+1]= data[n];
+//                }else {
+//                    data[n]= temp;
 //                    break;
-//                print(data);
+//                }
 //                citer++;
 //            }
-//            System.out.println(citer);
-//            //print(data);
 //        }
 //        return data;
 //    }

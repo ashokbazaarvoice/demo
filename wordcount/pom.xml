@@ -10,15 +10,15 @@
   
  <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hadoop.mr1.version>2.0.0-mr1-cdh4.1.2</hadoop.mr1.version>
-        <hadoop.version>2.0.0-cdh4.2.0</hadoop.version>
-        <hbase.version>0.92.1-cdh4.1.2</hbase.version>
+        <!--<hadoop.mr1.version>2.0.0-mr1-cdh4.1.2</hadoop.mr1.version>-->
+        <hadoop.version>2.5.0-cdh5.3.3</hadoop.version>
+        <!--<hbase.version>0.92.1-cdh4.1.2</hbase.version>-->
         <junit.version>4.10</junit.version>
-        <jdk.version>1.6</jdk.version>
-        <jackson.version>2.1.2</jackson.version>
+        <jdk.version>1.7</jdk.version>
+        <!--<jackson.version>2.1.2</jackson.version>-->
         <log4j.version>1.2.16</log4j.version>
-        <slf4j.version>1.7.4</slf4j.version>
-        <avro.version>1.7.5</avro.version>
+        <!--<slf4j.version>1.7.4</slf4j.version>-->
+        <!--<avro.version>1.7.5</avro.version>-->
     </properties>
 
     <dependencies>
@@ -49,6 +49,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
@@ -66,15 +67,16 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"></transformer>
+                            </transformers>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
                                     <excludes>
                                         <exclude>META-INF/*.SF</exclude>
                                         <exclude>META-INF/*.DSA</exclude>
-                                        <exclude>META-INF/*.RSA</exclude>
-                                        <exclude>*/job.properties</exclude>
-                                        <exclude>*/workflow.xml</exclude>
+                                        <exclude>META-INF/*</exclude>
                                     </excludes>
                                 </filter>
                             </filters>
@@ -83,7 +85,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>${artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>
     </build>
 
 

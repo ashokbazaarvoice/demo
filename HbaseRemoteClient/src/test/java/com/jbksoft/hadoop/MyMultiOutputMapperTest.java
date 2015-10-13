@@ -1,6 +1,5 @@
 package com.jbksoft.hadoop;
 
-import com.abc.MyMultiOutputMapper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

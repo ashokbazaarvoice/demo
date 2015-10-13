@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AvroDemo/AvroDemo.iml" filepath="$PROJECT_DIR$/../AvroDemo/AvroDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CDH5Demo/CDH5Demo.iml" filepath="$PROJECT_DIR$/../CDH5Demo/CDH5Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HbaseRemoteClient.iml" filepath="$PROJECT_DIR$/HbaseRemoteClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MavenSample1/MavenSample.iml" filepath="$PROJECT_DIR$/../MavenSample1/MavenSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OozieSample/OozieSample.iml" filepath="$PROJECT_DIR$/../OozieSample/OozieSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../avroSample/avroSample.iml" filepath="$PROJECT_DIR$/../avroSample/avroSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../levelup-java-examples/levelup-java-examples.iml" filepath="$PROJECT_DIR$/../../levelup-java-examples/levelup-java-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../maven-hello-plugin/maven-hello-plugin.iml" filepath="$PROJECT_DIR$/../maven-hello-plugin/maven-hello-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mygauava/mygauava.iml" filepath="$PROJECT_DIR$/../mygauava/mygauava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mysparkapp/mysparkapp.iml" filepath="$PROJECT_DIR$/../mysparkapp/mysparkapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sparkdemo/spark-grep.iml" filepath="$PROJECT_DIR$/../sparkdemo/spark-grep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../tutorials/spring-security-login-and-registration.iml" filepath="$PROJECT_DIR$/../../tutorials/spring-security-login-and-registration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../wordcount/wordcount.iml" filepath="$PROJECT_DIR$/../wordcount/wordcount.iml" />
+    </modules>
+  </component>
+</project>
+

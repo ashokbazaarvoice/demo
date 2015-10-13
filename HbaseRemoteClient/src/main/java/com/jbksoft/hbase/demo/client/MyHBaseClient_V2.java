@@ -37,8 +37,8 @@ public class MyHBaseClient_V2 {
 //            prop = new Properties();
 //            prop.load(MyHBaseClient.class.getClassLoader().getResourceAsStream("test.properties"));
                 conf = HBaseConfiguration.create();
-                conf.set(HBASE_ROOT_DIR, "hdfs://cdh4-master-0.mag.jbksoft.com:8020/hbase");
-                conf.set(HBASE_ZOOKEEPER, "cdh4hb-support-0.mag.jbksoft.com");
+                conf.set(HBASE_ROOT_DIR, "hdfs://cdh4-master-0.mag.bazaarvoice.com:8020/hbase");
+                conf.set(HBASE_ZOOKEEPER, "cdh4hb-support-0.mag.bazaarvoice.com");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -49,8 +49,8 @@ public class MyHBaseClient_V2 {
 
 
 //        hbaseHelper.hasDataForClient("avon-es","consus_nativereviews_test");
-            System.out.println("===========get one record========");
-            hbaseHelper.getOneRecord("consus_nativereviews_test", "007jamesbondfragrances/test0/review:007jamesbondfragrances:01a7191b-7bf4-556d-93e6-e7c59e35aff0");
+//            System.out.println("===========get one record========");
+//            hbaseHelper.getOneRecord("consus_nativereviews_test", "007jamesbondfragrances/test0/review:007jamesbondfragrances:01a7191b-7bf4-556d-93e6-e7c59e35aff0");
 
 //        hbaseHelper.getCSVFromHbase("consus_syndicated_reviews_test", "avon-es");
 //        String out = hbaseHelper.getCatalogResultByRowKey("catalog:avon-es::brand::6x9n2h1aqjwkqou0z8pqr2ych", "consus_catalog_test");
